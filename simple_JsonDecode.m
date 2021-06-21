@@ -1,8 +1,11 @@
-function jsonStruct = simple_JsonDecode(jsonFilePath)
+function jsonStruct = simple_JsonDecode(varargin)
 % simple decoder of json files for older Matlab versions <2017
 % please use 'jsondecode' in newer MATLAB versions
 %
-% Useage: simple_JsonDecode(jsonFilePath)
+% Useage: 
+%   simple_JsonDecode(jsonFilePath)
+%   simple_JsonDecode()                         % select json file via UI
+%
 %   input: jsonFilePath: full path of json file
 %
 % Assumed format of json-file:
@@ -43,8 +46,17 @@ function jsonStruct = simple_JsonDecode(jsonFilePath)
 % OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 % OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 %%
-
-
+if isempty(varargin)
+    [jFileName, jFolder] = uigetfile('*.json','Please select a json file'); 
+    if jFileName==0
+        disp('error while selecting file')
+    else
+        jsonFilePath=[jFolder,jFileName];
+    end
+elseif ~iscell(varargin)
+        jsonFilePath=varargin; 
+    else
+end
 
 jsonTxt = fileread(jsonFilePath);
 
