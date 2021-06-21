@@ -1,5 +1,5 @@
 # simple json-decode
-*simple_JsonDecode.m* is a json-file parser written for MATLAB and returns a MATLAB-struct. This script is suited for oder MATLAB versions (&lt;2017)
+*simple_JsonDecode.m* is a json-file parser written in MATLAB. It reads a json-file and returns the fields as a MATLAB-struct. This script is suited for oder MATLAB versions (&lt;2017)
 In newer MATLAB versions, the 'jsondecode'-command should be available with as a built-in function. \
 Advantage: No compilation needed!
 
@@ -17,4 +17,4 @@ Output: *MATLAB-struct*
   ```
   
  ## See also:
- If you are looking for a mexfile based version, please give a look at: [matlab-json](https://github.com/leastrobino/matlab-json)
+ If you are looking for a faster mexfile based version, please give a look at: [matlab-json](https://github.com/leastrobino/matlab-json)
