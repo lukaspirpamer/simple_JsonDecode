@@ -18,3 +18,7 @@ Output: *MATLAB-struct*
   
  ## See also:
  If you are looking for a faster mexfile based version, please give a look at: [matlab-json](https://github.com/leastrobino/matlab-json)
+
+
+[![View simple_JsonDecode on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://de.mathworks.com/matlabcentral/fileexchange/94595-simple_jsondecode)
+
