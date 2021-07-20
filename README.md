@@ -15,7 +15,28 @@ Output: *MATLAB-struct*
   "FIELDNAME2": "STRING",
   "FIELDNAME3": [ARRAYVALUE1,ARRAYVALUE2],
   ```
-  
+## Example:
+    simple_JsonDecode('jsonfile_example.json')
+
+expected output: 
+
+    ans = 
+    struct with fields:
+
+                              Modality: 'MR'
+                 MagneticFieldStrength: 1.5000
+                      ImagingFrequency: 63.7018
+                          Manufacturer: 'Siemens'
+                ManufacturersModelName: 'Symphony'
+                      BodyPartExamined: 'HEAD'
+                       PatientPosition: 'HFS'
+              ProcedureStepDescription: 'head_general'
+                     MRAcquisitionType: '2D'
+                     SeriesDescription: 'localizer'
+                          ProtocolName: 'localizer'
+                      ScanningSequence: 'GR'
+                       SequenceVariant: 'SP'
+
  ## See also:
  If you are looking for a faster mexfile based version, please give a look at: [matlab-json](https://github.com/leastrobino/matlab-json)
 
