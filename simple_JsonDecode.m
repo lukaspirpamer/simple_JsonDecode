@@ -13,8 +13,15 @@ function jsonStruct = simple_JsonDecode(varargin)
 % "FIELDNAME2": "STRING",
 % "FIELDNAME3": [ARRAYVALUE1,ARRAYVALUE2],
 %
-% Author: Lukas Pirpamer (v.1.0)
+% Author: Lukas Pirpamer (v.1.1)
 % lukas.pirpamer@medunigraz.at
+%
+% Acknowledgements: 
+% Many thanks to thrynae for the bug report, the varargin mistake is
+% corrected in v.1.1
+%
+% Updates:
+% v.1.1: Handling of varargin for GUI and command-line call
 %
 % ------------------------------------------------------------------------------
 %% BSD 3-Clause License
@@ -55,7 +62,18 @@ if isempty(varargin)
     end
 elseif ~iscell(varargin)
         jsonFilePath=varargin; 
-    else
+elseif length(varargin)==1
+    jsonFilePath=varargin{:}; 
+else
+    if length(varargin)>1 
+        disp('Attention: this function allows only one argument')
+    end
+    error(['ERROR: input could not be read.',char(10)...
+          ' Please try: simple_JsonDecode (without any argument) ',char(10)...
+          ' OR ',char(10)...
+          ' simple_JsonDecode(''jsonfile_example.json'')',char(10)...
+          char(10)...
+          ' if the error still persists, please open an issue on the github page'])
 end
 
 jsonTxt = fileread(jsonFilePath);
