@@ -5,6 +5,11 @@ Advantage: No compilation needed!
 
 ## Useage: 
 ```simple_JsonDecode(jsonFilePath)```
+or
+```simple_JsonDecode```
+to open a UI-menu for selecting a json file
+
+
 
 Input:  *jsonFilePath*: full path of json file \
 Output: *MATLAB-struct*
