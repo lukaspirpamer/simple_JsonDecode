@@ -3,7 +3,7 @@
 In newer MATLAB versions, the 'jsondecode'-command should be available as a built-in function. \
 Advantage: No compilation needed!
 
-## Useage: 
+## Usage: 
 ```simple_JsonDecode(jsonFilePath)```
 or
 ```simple_JsonDecode```
