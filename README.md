@@ -1,7 +1,8 @@
 # simple json-decode
-*simple_JsonDecode.m* is a json-file parser written in MATLAB. It reads a json-file and returns the fields as a MATLAB-struct. This script is suited for oder MATLAB versions (&lt;2017)
+*simple_JsonDecode.m* [![View simple_JsonDecode on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://de.mathworks.com/matlabcentral/fileexchange/94595-simple_jsondecode) is a json-file parser written in MATLAB. It reads a json-file and returns the fields as a MATLAB-struct. This script is suited for oder MATLAB versions (&lt;2017)
 In newer MATLAB versions, the 'jsondecode'-command should be available as a built-in function. \
 Advantage: No compilation needed!
+
 
 ## Usage: 
 ```simple_JsonDecode(jsonFilePath)```
@@ -43,8 +44,10 @@ expected output:
                        SequenceVariant: 'SP'
 
  ## See also:
+ For a robust and validated json-parser using the ECMA JSON syntax standard, please visit the [JSON](https://github.com/thrynae/JSON) function [![View simple_JsonDecode on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://de.mathworks.com/matlabcentral/fileexchange/95633-json)
+ 
  If you are looking for a faster mexfile based version, please give a look at: [matlab-json](https://github.com/leastrobino/matlab-json)
 
 
-[![View simple_JsonDecode on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://de.mathworks.com/matlabcentral/fileexchange/94595-simple_jsondecode)
+
 
